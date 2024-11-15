@@ -16,27 +16,9 @@ public class HelloController {
         return "Hello, " + name + "!";
     }
 
-    // http://localhost:8080/hi
-    @GetMapping("/hi")
-    public String sayHi(@RequestParam(name = "name", defaultValue = "World") String name) {
-        return "Hi, " + name + "!";
-    }
 
 
-    // http://localhost:8080/greet?name=John
-    @GetMapping("/greet")
-    public String greetWithTime(@RequestParam(name = "name", defaultValue = "Guest") String name) {
-        String greeting;
-        int hour = java.time.LocalTime.now().getHour();
-        if (hour < 12) {
-            greeting = "Good Morning";
-        } else if (hour < 18) {
-            greeting = "Good Afternoon";
-        } else {
-            greeting = "Good Evening";
-        }
-        return greeting + ", " + name + "!";
-    }
+  
 
     // http://localhost:8080/reverse
     @PostMapping("/reverse")
