@@ -35,9 +35,7 @@ public class HelloController {
         } else {
             greeting = "Good Evening";
         }
-
-
-        return greeting + ", " + name + "!!!!";
+        return greeting + ", " + name + "!";
     }
 
     // http://localhost:8080/reverse
